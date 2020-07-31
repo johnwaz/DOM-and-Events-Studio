@@ -37,9 +37,11 @@ window.addEventListener("load", function() {
 
     landing.addEventListener("click", function() {
         let response = alert("The shuttle is landing. Landing gear engaged.");
-        flightStatus.innerHTML = "The shuttle has landed.";
-        shuttleBackground.style.background = "green";
-        shuttleHeight.innerHTML = "0";
+        if (response) {
+            flightStatus.innerHTML = "The shuttle has landed.";
+            shuttleBackground.style.background = "green";
+            shuttleHeight.innerHTML = "0";
+        }
     });
 
     missionAbort.addEventListener("click", function() {
